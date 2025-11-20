@@ -29,19 +29,19 @@ export const BrandShowcase: React.FC = () => {
         ))}
       </div>
 
-      {/* Dynamic Brand Content Area */}
-      <div className="relative min-h-[80vh] w-full overflow-hidden">
+      {/* Dynamic Brand Content Area - Using CSS Grid for stacking instead of absolute positioning to fix mobile height */}
+      <div className="relative w-full grid grid-cols-1">
         {BRANDS.map((brand) => (
           <div
             key={brand.id}
-            className={`absolute inset-0 transition-all duration-700 ease-in-out transform ${
+            className={`col-start-1 row-start-1 w-full transition-all duration-700 ease-in-out ${
               activeBrand === brand.id 
-                ? 'opacity-100 translate-x-0 z-10 scale-100' 
-                : 'opacity-0 translate-x-10 z-0 scale-95 pointer-events-none'
+                ? 'opacity-100 z-10 scale-100' 
+                : 'opacity-0 z-0 scale-95 pointer-events-none'
             }`}
           >
             {/* Background Gradient specific to brand */}
-            <div className={`absolute inset-0 bg-gradient-to-br ${brand.color} opacity-10 mix-blend-screen`} />
+            <div className={`absolute inset-0 bg-gradient-to-br ${brand.color} opacity-10 mix-blend-screen pointer-events-none`} />
             
             <div className="max-w-7xl mx-auto px-6 h-full flex flex-col lg:flex-row items-center gap-12 lg:gap-24 py-12">
               
@@ -73,7 +73,7 @@ export const BrandShowcase: React.FC = () => {
                   href={brand.websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 px-8 py-4 bg-white text-black rounded-full font-bold uppercase tracking-wider hover:gap-6 transition-all duration-300 w-fit"
+                  className="group flex items-center gap-4 px-8 py-4 bg-white text-black rounded-full font-bold uppercase tracking-wider hover:gap-6 transition-all duration-300 w-fit cursor-pointer relative z-50"
                 >
                   {brand.ctaText}
                   <ArrowRight size={18} />
@@ -83,7 +83,7 @@ export const BrandShowcase: React.FC = () => {
               {/* Visual Content */}
               <div className="flex-1 h-[400px] lg:h-[600px] w-full relative order-1 lg:order-2">
                  {/* Decorative Elements based on brand */}
-                 <div className="absolute inset-0 flex items-center justify-center">
+                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div className={`w-[80%] h-[80%] rounded-full bg-gradient-to-tr ${brand.color} blur-[80px] opacity-40 animate-pulse`} />
                  </div>
                  
