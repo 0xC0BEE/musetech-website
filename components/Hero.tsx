@@ -34,15 +34,15 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Main Headlines - Split for visual impact */}
-        {/* Fixed clipping issue: relaxed leading to 1.1 and added pb-2 to clipped spans to accommodate descenders (g, y) */}
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-white leading-[1.1] mb-8 opacity-0 animate-fadeIn delay-300">
-          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400 pb-2">
+        {/* Fixed clipping issue: relaxed leading to 1.2 and increased pb-4 to fully clear descenders (g, y) */}
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-white leading-[1.2] mb-8 opacity-0 animate-fadeIn delay-300">
+          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400 pb-4 -mb-2">
             Technology.
           </span>
           <span className="block italic text-white/90 pr-12">
             Wellness.
           </span>
-          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-orange-400 to-amber-600 pb-2">
+          <span className="block bg-clip-text text-transparent bg-gradient-to-r from-amber-200 via-orange-400 to-amber-600 pb-4 -mb-2">
             Identity.
           </span>
         </h1>
