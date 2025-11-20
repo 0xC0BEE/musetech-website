@@ -11,6 +11,7 @@ export interface Brand {
   icon: LucideIcon;
   imagePlaceholder: string; // Using gradients or abstract shapes for now
   ctaText: string;
+  websiteUrl: string;
 }
 
 export interface CoreValue {

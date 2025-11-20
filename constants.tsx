@@ -34,7 +34,8 @@ export const BRANDS: Brand[] = [
     textColor: "text-cyan-100",
     icon: Cpu,
     imagePlaceholder: "https://picsum.photos/800/600?random=1",
-    ctaText: "Read More"
+    ctaText: "Visit Creative Muse",
+    websiteUrl: "https://creativemuse.ca/"
   },
   {
     id: 'auralis-crystals',
@@ -51,7 +52,8 @@ export const BRANDS: Brand[] = [
     textColor: "text-amber-100",
     icon: Gem,
     imagePlaceholder: "https://picsum.photos/800/600?random=2",
-    ctaText: "Shop Crystals"
+    ctaText: "Shop Crystals",
+    websiteUrl: "https://auraliscrystals.com/"
   },
   {
     id: 'tapcard',
@@ -68,7 +70,8 @@ export const BRANDS: Brand[] = [
     textColor: "text-emerald-100",
     icon: Smartphone,
     imagePlaceholder: "https://picsum.photos/800/600?random=3",
-    ctaText: "Get Your Digital Card"
+    ctaText: "Get Your Digital Card",
+    websiteUrl: "https://tappitcards.com/my-account/"
   }
 ];
 

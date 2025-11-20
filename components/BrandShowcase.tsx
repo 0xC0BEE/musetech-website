@@ -69,10 +69,15 @@ export const BrandShowcase: React.FC = () => {
                   ))}
                 </div>
 
-                <button className="group flex items-center gap-4 px-8 py-4 bg-white text-black rounded-full font-bold uppercase tracking-wider hover:gap-6 transition-all duration-300">
+                <a 
+                  href={brand.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-4 px-8 py-4 bg-white text-black rounded-full font-bold uppercase tracking-wider hover:gap-6 transition-all duration-300 w-fit"
+                >
                   {brand.ctaText}
                   <ArrowRight size={18} />
-                </button>
+                </a>
               </div>
 
               {/* Visual Content */}
